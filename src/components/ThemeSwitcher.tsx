@@ -67,10 +67,13 @@ export const ThemeSwitcher = ({ currentTheme, onThemeChange }: ThemeSwitcherProp
 
   return (
     <>
-      {/* Enhanced hover hint - theme icon indicator on left side */}
-      <div className="fixed left-2 top-1/2 transform -translate-y-1/2 z-40">
-        <div className="theme-switcher-icon w-4 h-10 rounded-r-full flex items-center justify-center">
-          <Palette className="w-3 h-3 text-primary-foreground" />
+      {/* Enhanced highlighted theme switcher button */}
+      <div className="fixed left-0 top-1/2 transform -translate-y-1/2 z-40">
+        <div className="theme-switcher-icon w-8 h-16 rounded-r-2xl flex items-center justify-center shadow-2xl border-r-2 border-primary/30 animate-pulse">
+          <div className="relative">
+            <Palette className="w-5 h-5 text-primary-foreground drop-shadow-lg" />
+            <div className="absolute inset-0 bg-primary/20 rounded-full blur-sm animate-ping"></div>
+          </div>
         </div>
       </div>
       
