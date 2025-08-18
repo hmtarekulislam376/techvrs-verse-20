@@ -32,22 +32,22 @@ export const ProductivityTools = () => {
   return (
     <div className="productivity-container animate-fade-in">
       {/* Tool Selection Tabs */}
-      <div className="flex flex-wrap justify-center gap-2 mb-6 border-b border-border/50 pb-4">
+      <div className="flex flex-wrap justify-center gap-1 sm:gap-2 mb-4 border-b border-border/50 pb-3">
         {tools.map((tool) => {
           const IconComponent = tool.icon;
           return (
             <button
               key={tool.id}
               onClick={() => handleToolChange(tool.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+              className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-1.5 sm:py-2 rounded-lg font-medium transition-all duration-200 text-xs sm:text-sm ${
                 selectedTool === tool.id
                   ? 'bg-primary text-primary-foreground shadow-lg'
                   : 'bg-secondary/50 text-muted-foreground hover:bg-secondary hover:text-foreground'
               }`}
             >
-              <IconComponent className="w-4 h-4" />
-              <span className="hidden sm:inline">{tool.name}</span>
-              <span className="sm:hidden">{tool.name.split(' ')[0]}</span>
+              <IconComponent className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="hidden md:inline">{tool.name}</span>
+              <span className="md:hidden">{tool.name.split(' ')[0]}</span>
             </button>
           );
         })}

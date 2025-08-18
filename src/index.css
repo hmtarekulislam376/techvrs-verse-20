@@ -218,12 +218,12 @@
 
   /* Productivity tools styling */
   .productivity-container {
-    @apply glass-card p-6 rounded-2xl;
+    @apply glass-card p-4 rounded-xl;
     background: var(--productivity-bg);
     border: 1px solid var(--productivity-border);
-    min-height: 320px;
+    min-height: 280px;
     width: 100%;
-    max-width: 600px;
+    max-width: 480px;
   }
 
   /* Clock styling */
@@ -258,14 +258,52 @@
     pointer-events: all;
   }
 
+  /* Theme switcher highlighting */
+  .theme-switcher-highlight {
+    background: var(--hero-gradient);
+    box-shadow: var(--glow-primary), var(--shadow-elegant);
+    border: 2px solid var(--primary);
+  }
+
+  .theme-switcher-icon {
+    background: var(--primary);
+    box-shadow: 0 0 15px var(--primary);
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
   /* Mobile responsive adjustments */
   @media (max-width: 768px) {
     .clock-time {
-      @apply text-4xl;
+      @apply text-3xl;
     }
     
     .productivity-container {
-      @apply mx-4 p-4;
+      @apply mx-3 p-3;
+      max-width: 95%;
+      min-height: 240px;
+    }
+
+    .glass-card {
+      @apply p-3;
+    }
+
+    .btn-hero {
+      @apply px-6 py-2 text-sm;
+    }
+
+    .btn-glass {
+      @apply px-4 py-2 text-sm;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .clock-time {
+      @apply text-2xl;
+    }
+    
+    .productivity-container {
+      min-height: 200px;
+      max-width: 90%;
     }
   }
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import techvrsLogo from '@/assets/techvrs-logo.png';
+import techvrsLogo from '@/assets/techvrs-logo-new.png';
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

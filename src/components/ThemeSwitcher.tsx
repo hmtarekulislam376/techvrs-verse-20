@@ -67,9 +67,11 @@ export const ThemeSwitcher = ({ currentTheme, onThemeChange }: ThemeSwitcherProp
 
   return (
     <>
-      {/* Hover hint - theme icon indicator on left side */}
+      {/* Enhanced hover hint - theme icon indicator on left side */}
       <div className="fixed left-2 top-1/2 transform -translate-y-1/2 z-40">
-        <div className="w-3 h-8 bg-primary/20 rounded-r-full animate-pulse" />
+        <div className="theme-switcher-icon w-4 h-10 rounded-r-full flex items-center justify-center">
+          <Palette className="w-3 h-3 text-primary-foreground" />
+        </div>
       </div>
       
       <div 
@@ -80,7 +82,7 @@ export const ThemeSwitcher = ({ currentTheme, onThemeChange }: ThemeSwitcherProp
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="glass-card p-4 rounded-xl shadow-xl">
+        <div className="theme-switcher-highlight p-4 rounded-xl shadow-xl">
           <div className="flex items-center gap-3 mb-3">
             <Palette className="w-5 h-5 text-primary" />
             <span className="font-medium text-sm">Change Theme</span>

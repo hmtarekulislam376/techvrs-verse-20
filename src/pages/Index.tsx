@@ -78,8 +78,8 @@ const Index = () => {
       <MusicPlayer />
 
       {/* Main Content */}
-      <main className="relative z-10 container mx-auto px-4 py-8">
-        <div className="flex flex-col items-center justify-center min-h-screen">
+      <main className="relative z-10 container mx-auto px-3 sm:px-4 py-4 sm:py-8">
+        <div className="flex flex-col items-center justify-center min-h-screen space-y-4 sm:space-y-6">
           
           {/* Live Clock */}
           <Clock />
@@ -100,32 +100,32 @@ const Index = () => {
             Latest Tech Reviews & Insights
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="glass-card p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-3">Latest Reviews</h3>
-              <p className="text-muted-foreground">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12">
+            <div className="glass-card p-4 sm:p-6 rounded-xl">
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Latest Reviews</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
                 In-depth analysis of the latest tech products, gadgets, and software solutions.
               </p>
             </div>
             
-            <div className="glass-card p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-3">Tutorials</h3>
-              <p className="text-muted-foreground">
+            <div className="glass-card p-4 sm:p-6 rounded-xl">
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Tutorials</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
                 Step-by-step guides to help you master technology and boost productivity.
               </p>
             </div>
             
-            <div className="glass-card p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-3">Industry News</h3>
-              <p className="text-muted-foreground">
+            <div className="glass-card p-4 sm:p-6 rounded-xl">
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Industry News</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
                 Stay updated with the latest trends and developments in the tech world.
               </p>
             </div>
           </div>
           
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-8">Explore Our Content</h3>
-            <div className="flex flex-wrap justify-center gap-4">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8">Explore Our Content</h3>
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
               <a 
                 href="https://blog.techvrs.com" 
                 className="btn-hero"
